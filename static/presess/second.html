@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Second Session Storage page</title>
+<script>
+function GetAndSet() {
+  var storage = window.sessionStorage;
+  if (!storage.pageViewCount) {
+    storage.pageViewCount = 0;
+  }
+  storage.pageViewCount = parseInt(storage.pageViewCount) + 1;
+  var el = document.getElementById('pageviews');
+  el.innerText = storage.pageViewCount;
+}
+
+window.onload = GetAndSet;
+</script>
+</head>
+<body>
+Second page<p/>
+
+<a href="http://sandbox.bentzel.net/static/presess/first.html">Maybe click here</a>
+<div id="pageviews">
+0
+</div>
+</body>
+</html>

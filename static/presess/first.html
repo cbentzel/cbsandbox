@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>First Session Storage page</title>
+<link rel="prerender" href="http://cbentzel-dev-test.appspot.com/static/presess/second.html"/>
+<script>
+function GetAndSet() {
+  var storage = window.sessionStorage;
+  if (!storage.pageViewCount) {
+    storage.pageViewCount = 0;
+  }
+  storage.pageViewCount = parseInt(storage.pageViewCount) + 1;
+  var el = document.getElementById('pageviews');
+  el.innerText = storage.pageViewCount;
+}
+
+window.onload = GetAndSet;
+</script>
+</head>
+<body>
+First page<p/>
+<a href="http://cbentzel-dev-test.appspot.com/static/presess/second.html">Click here</a>
+<div id="pageviews">
+0
+</div>
+</body>
+</html>
