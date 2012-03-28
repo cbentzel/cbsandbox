@@ -1,8 +1,21 @@
 <html>
 <head>
-  <link rel="prerender" href="destination.html"/>
+<title>Testing location.replace</title>
+<link rel="prerender" href="prerender_destination.html"/>
 </head>
 <body>
-  <a href="redirector.html">Click Here</a>
+  <p>Some tests for cross-process location.replace. If these worked
+  correctly, the redirection page should not be included in the
+  history after it is replaced.</p>
+  <ul>
+    <li>
+      <a href="redirector_app.html">Redirect to app.</a> Requires
+      YouTube app to be installed.
+    </li>
+    <li>
+      <a href="redirector_prerender.html">Redirect to prerendered
+      page.</a> Prerender must be enabled.
+    </li>
+  </ul>
 </body>
 </html>
